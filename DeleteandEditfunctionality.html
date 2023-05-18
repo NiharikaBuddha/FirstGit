@@ -31,6 +31,7 @@ var filter = document.getElementById('filter');
 
 // Form submit event
 form.addEventListener('submit', addItem);
+// form.addEventListener('submit', addItem2);
 // Delete event
 itemList.addEventListener('click', removeItem);
 // Filter event
@@ -42,14 +43,23 @@ function addItem(e){
 
   // Get input value
   var newItem = document.getElementById('item').value;
+  var newItem2 = document.getElementById('item2').value;
 
   // Create new li element
   var li = document.createElement('li');
+  var li2 = document.createElement('li');
+
+  //Create new input element
+  var input = document.createElement('input');
+  var input2 = document.createElement('input');
   // Add class
   li.className = 'list-group-item';
-//   li2.className = 'list-group-item';
+  input.className = 'form-control mr-2';
+  input2.className = 'form-control mr-2';
+
   // Add text node with input value
   li.appendChild(document.createTextNode(newItem));
+  li2.appendChild(document.createTextNode(newItem2));
 
   // Create del button element
   var deleteBtn = document.createElement('button');
@@ -69,7 +79,7 @@ function addItem(e){
 
   // Append li to list
   itemList.appendChild(li);
-//   itemList.appendChild(li2);
+  itemList.append(li2);
 }
 
 // Remove item
@@ -99,6 +109,26 @@ function filterItems(e){
   });
 }
 
+//CreateElements
+    //Create a div
+    var newDiv = document.createElement('input');
+    //Add class
+    newDiv.className='form-control mr-2';
+    //Add id
+    newDiv.id='item2';
+    newDiv.type = 'text';
+    // //Create text node
+    var newDivText = document.createTextNode('HEllo word');
+    // //Add text to div
+    newDiv.appendChild(newDivText);
+    
+    var container = document.querySelector('form');
+    console.log(container);
+    var h1 = document.querySelector('#item');
+    console.log(h1);
+
+    console.log(newDiv);
+    container.insertBefore(newDiv,h1);
 
     </script>
    </div>
