@@ -1,0 +1,71 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>appointment</title>
+
+  <style>
+    form {
+      margin: 5% 50% 0 40%;
+    }
+
+    body {
+      
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    #listofitems li {
+  color: black;
+}
+
+  </style>
+</head>
+
+<body>
+  <h2 style="text-align: center; padding: 30px 0 10px 0; color;"> Book a Appointment</h2>
+  <p style="text-align: center;">Book a Appointment with <strong>Prerana Singh.</strong></p>
+  <form action="#" onsubmit="submitdetails(event)">
+
+    <label>First Name</label>
+    <br>
+    <input type="text" placeholder="Enter your First Name" id="fname" required>
+    <br>
+    <br>
+    <label>Last Name</label>
+    <br>
+    <input type="text" placeholder="Enter your Last Name" id="lname" required>
+    
+    <br>
+    <br>
+    <label>Mobile No</label>
+    <br>
+    <input type="number" placeholder="Enter your Mobile Number" id="mobile" required>
+    
+    <br>
+    <br>
+    <button style="background: green;
+          color: black;
+          border-style: outset;
+          border-color: black;
+          height: 30px;
+          width: 80px;
+          font: bold15px arial,sans-serif;
+          text-shadow: none;">Submit</button>
+
+  
+
+
+  </form>
+
+
+  <ul id="listofitems"></ul>
+
+  <script src="Task13.js">
+
+  </script>
+</body>
+
+</html>
