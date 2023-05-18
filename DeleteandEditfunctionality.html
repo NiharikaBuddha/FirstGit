@@ -47,19 +47,12 @@ function addItem(e){
 
   // Create new li element
   var li = document.createElement('li');
-  var li2 = document.createElement('li');
-
-  //Create new input element
-  var input = document.createElement('input');
-  var input2 = document.createElement('input');
   // Add class
   li.className = 'list-group-item';
-  input.className = 'form-control mr-2';
-  input2.className = 'form-control mr-2';
 
   // Add text node with input value
   li.appendChild(document.createTextNode(newItem));
-  li2.appendChild(document.createTextNode(newItem2));
+  li.appendChild(document.createTextNode(newItem2));
 
   // Create del button element
   var deleteBtn = document.createElement('button');
@@ -79,7 +72,8 @@ function addItem(e){
 
   // Append li to list
   itemList.appendChild(li);
-  itemList.append(li2);
+  
+  localStorage.setItem('textt',newItem+newItem2);
 }
 
 // Remove item
@@ -118,7 +112,7 @@ function filterItems(e){
     newDiv.id='item2';
     newDiv.type = 'text';
     // //Create text node
-    var newDivText = document.createTextNode('HEllo word');
+    var newDivText = document.createTextNode('');
     // //Add text to div
     newDiv.appendChild(newDivText);
     
@@ -129,6 +123,7 @@ function filterItems(e){
 
     console.log(newDiv);
     container.insertBefore(newDiv,h1);
+    // console.log(localStorage.getItem(textt));
 
     </script>
    </div>
