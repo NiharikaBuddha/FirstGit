@@ -73,7 +73,15 @@ function addItem(e){
   // Append li to list
   itemList.appendChild(li);
   
-  localStorage.setItem('textt',newItem+newItem2);
+  // localStorage.setItem('textt',newItem+newItem2);
+
+  let myObj={desc : newItem+newItem2};
+  
+  let myOjectSerialized = JSON.stringify(myObj);
+  localStorage.setItem("myObj",myOjectSerialized);
+
+  // let myOjectdeSerialized = JSON.parse(localStorage.getItem("myObj"));
+
 }
 
 // Remove item
@@ -123,7 +131,6 @@ function filterItems(e){
 
     console.log(newDiv);
     container.insertBefore(newDiv,h1);
-    // console.log(localStorage.getItem(textt));
 
     </script>
    </div>
